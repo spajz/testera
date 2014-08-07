@@ -65,7 +65,10 @@
     app.initialize();
 
     $(document).on('pageinit', function() {
-        $(".date-input-css").datepicker();
+        $(".date-input-css").datepicker().focus(function() {
+            this.blur();
+        });
+
     });
 </script>
 
